@@ -13,7 +13,7 @@ pipeline {
         stage('Ejecutar script') {
             steps {
                 echo "Ejecutando script principal..."
-                bat 'venv\\Scripts\\activate && python pika.py'
+                bat 'venv\\Scripts\\activate && python LAB.py'
             }
         }
     }
@@ -23,6 +23,7 @@ pipeline {
         failure { echo "❌ Error en alguna etapa del pipeline" }
     }
 }
+
 
 
 
