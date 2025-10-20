@@ -6,7 +6,7 @@ def obtener_pokemon(numero):
     url = f"https://pokeapi.co/api/v2/pokemon/{numero}"
     r = requests.get(url)
     if r.status_code != 200:
-        print(f"⚠️ No se pudo obtener el Pokémon #{numero}")
+        print(f"No se pudo obtener el Pokémon #{numero}")
         return None
 
     data = r.json()
@@ -31,13 +31,13 @@ def obtener_numero_pokemon(fecha_inicio=datetime.date(2025, 1, 20)):
 
 def pokedeldia():
     numero = obtener_numero_pokemon()
-    print(f"📅 Hoy corresponde al Pokémon #{numero}")
+    print(f"Hoy corresponde al Pokémon #{numero}")
     pokemon = obtener_pokemon(numero)
 
     if pokemon:
         df = pd.DataFrame([pokemon])
         df.to_csv("pokemon_del_dia.csv", index=False)
-        print(f"✅ Pokémon del día guardado: {pokemon['nombre']}")
+        print(f"Pokémon del día guardado: {pokemon['nombre']}")
         print(df)
 
 
