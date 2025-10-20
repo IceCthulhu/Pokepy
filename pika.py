@@ -30,7 +30,7 @@ def ejecutar_etl(lista_pokemon):
     
     df = pd.DataFrame(resultados)
     df.to_csv("pokemon_data.csv", index=False)
-    print("✅ Datos guardados en pokemon_data.csv")
+    print("Datos guardados en pokemon_data.csv")
 
 lista = ["pikachu", "bulbasaur", "charmander", "squirtle", "mew"]
 ejecutar_etl(lista)
