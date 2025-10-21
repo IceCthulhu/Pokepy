@@ -21,7 +21,7 @@ def obtener_pokemon(numero):
     return info
 
 
-def obtener_numero_pokemon(fecha_inicio=datetime.date(2025, 1, 1)):
+def obtener_numero_pokemon(fecha_inicio=datetime.date(2025, 4, 5)):
     """Calcula el número del Pokémon según los días transcurridos"""
     hoy = datetime.date.today()
     delta_dias = (hoy - fecha_inicio).days
